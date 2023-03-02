@@ -5,14 +5,16 @@ import {
   SiHtml5,
   SiJavascript,
   SiChakraui,
-  SiSwiper,
-  SiHeroku,
-  SiVercel,
   SiNetlify,
   SiMongodb,
   SiExpress,
-  SiNodedotjs,
+  deSiNodotjs,
   SiJsonwebtokens,
+  SiRedux,
+  SiVisualstudiocode,
+  SiNodemon,
+  SiPostman,
+  SiMaterialui,
 } from "react-icons/si";
 import { DiCss3 } from "react-icons/di";
 import { VscJson } from "react-icons/vsc";
@@ -45,6 +47,7 @@ export const Projects = () => {
                   <SiHtml5 />
                   <DiCss3 />
                   <SiJavascript />
+                  <SiNetlify />
                 </div>
                 <div>
                   <a
@@ -91,6 +94,7 @@ export const Projects = () => {
                   <SiHtml5 />
                   <DiCss3 />
                   <SiJavascript />
+                  <SiNetlify />
                 </div>
                 <div>
                   <a
@@ -104,6 +108,57 @@ export const Projects = () => {
                   </a>
                   <a
                     href="https://github.com/suryathink/sephora-clone"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span type="button" className="btns onbt">
+                      View Code
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="projects_container" data-aos="fade-right">
+            <div className="project">
+              <div className="project_videocontainer">
+                <div>
+                  <img
+                    src="https://user-images.githubusercontent.com/107556633/222368900-47c47256-e233-4ebc-9a25-3443e8ef1e98.png"
+                    alt="Quora"
+                  />
+                </div>
+              </div>
+              <div className="project_information">
+                <h2>Quora</h2>
+                <p>
+                  Quora is a place to gain and share knowledge. It's a platform
+                  to ask questions and connect with people who contribute unique
+                  insights and quality answers.
+                </p>
+                <div>
+                  <SiHtml5 />
+                  <DiCss3 />
+                  <SiJavascript />
+                  <FaReact />
+                  <SiRedux />
+                  <SiJsonwebtokens />
+                  <SiMaterialui />
+                  <SiChakraui />
+                  <SiNetlify />
+                </div>
+                <div>
+                  <a
+                    href="https://quora-clone-project.netlify.app"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span type="button" className="btns onbt">
+                      Go Live
+                    </span>
+                  </a>
+                  <a
+                    href="https://github.com/vishwajeet-7/Quora-clone-unit-6"
                     target="_blank"
                     rel="noreferrer"
                   >
