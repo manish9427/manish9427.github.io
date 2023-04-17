@@ -15,6 +15,7 @@ import {
   SiNodemon,
   SiPostman,
   SiMaterialui,
+  SiNodedotjs,
 } from "react-icons/si";
 import { DiCss3 } from "react-icons/di";
 import { VscJson } from "react-icons/vsc";
@@ -159,6 +160,58 @@ export const Projects = () => {
                   </a>
                   <a
                     href="https://github.com/vishwajeet-7/Quora-clone-unit-6"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span type="button" className="btns onbt">
+                      View Code
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="projects_container" data-aos="fade-right">
+            <div className="project">
+              <div className="project_videocontainer">
+                <div>
+                  <img
+                    src="https://user-images.githubusercontent.com/107556633/232496669-a41100f7-8031-4196-bae9-82af87bd4d97.png"
+                    alt="Farfetch"
+                  />
+                </div>
+              </div>
+              <div className="project_information">
+                <h2>Farfetch</h2>
+                <p>
+                  Farfetch is a British-Portuguese online luxury fashion retail
+                  platform that sells products from over 700 boutiques and
+                  brands from around the world.
+                </p>
+                <div>
+                  <SiHtml5 />
+                  <DiCss3 />
+                  <SiJavascript />
+                  <FaReact />
+                  <SiRedux />
+                  <SiNodedotjs />
+                  <SiExpress />
+                  <SiMongodb />
+                  <SiChakraui />
+                  <SiNetlify />
+                </div>
+                <div>
+                  <a
+                    href="https://farfetchclone.netlify.app/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span type="button" className="btns onbt">
+                      Go Live
+                    </span>
+                  </a>
+                  <a
+                    href="https://github.com/HIMANSHUMISHRA389/Farfetch"
                     target="_blank"
                     rel="noreferrer"
                   >
