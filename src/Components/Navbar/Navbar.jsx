@@ -19,13 +19,13 @@ export const Navbar = () => {
   };
   return (
     <>
-      <div>
-        <nav className="center nav">
+      <div id="nav-menu">
+        <nav class="nav-link home" className="center nav">
           <ul
             style={{ display: showNavList ? "flex" : null }}
             className="nav__list"
           >
-            <li className="nav__list-item">
+            <li class="nav-link about" className="nav__list-item">
               <a
                 href="#about"
                 onClick={() => toggleNavList("#about")}
@@ -43,7 +43,7 @@ export const Navbar = () => {
                 Tech Stacks
               </a>
             </li>
-            <li className="nav__list-item">
+            <li class="nav-link skills" className="nav__list-item">
               <a
                 href="#skills"
                 onClick={() => toggleNavList("#skills")}
@@ -52,7 +52,7 @@ export const Navbar = () => {
                 Skills
               </a>
             </li>
-            <li className="nav__list-item">
+            <li class="nav-link projects" className="nav__list-item">
               <a
                 href="#projects"
                 onClick={() => toggleNavList("#projects")}
@@ -61,7 +61,7 @@ export const Navbar = () => {
                 Projects
               </a>
             </li>
-            <li className="nav__list-item">
+            <li class="nav-link contact" className="nav__list-item">
               <a
                 href="#contact"
                 onClick={() => toggleNavList("#contact")}
@@ -70,8 +70,13 @@ export const Navbar = () => {
                 Contact
               </a>
             </li>
-            <li className="nav__list-item">
+            <li
+              id="resume-button-2"
+              class="nav-link resume"
+              className="nav__list-item"
+            >
               <a
+                id="resume-link-1"
                 href="https://drive.google.com/file/d/1TDHLGPx4B30QWqWZQOz0Ql9wkeHSxmOy/view"
                 onClick={toggleNavList}
                 className="link link--nav"

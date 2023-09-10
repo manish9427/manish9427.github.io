@@ -12,7 +12,7 @@ const GetInTouch = () => {
 
   return (
     <>
-      <div className="section">
+      <div id="contact" className="section">
         <h2 className="section__title" data-aos="fade-right">
           Get in <span className="different">Touch</span>
         </h2>
@@ -24,6 +24,7 @@ const GetInTouch = () => {
               data-aos="fade-right"
             >
               <a
+                id="contact-linkedin"
                 href="https://www.linkedin.com/in/manish-verma-9626701b5/"
                 target="_blank"
                 rel="noreferrer"
@@ -31,6 +32,7 @@ const GetInTouch = () => {
                 <FaLinkedin className="linkedin" />
               </a>
               <a
+                id="contact-github"
                 href="https://github.com/manish9427"
                 target="_blank"
                 rel="noreferrer"
@@ -46,7 +48,11 @@ const GetInTouch = () => {
               </a>
             </div>
             <br />
-            <div className="mailNumber" data-aos="fade-right">
+            <div
+              id="contact-email"
+              className="mailNumber"
+              data-aos="fade-right"
+            >
               <div>
                 <span>
                   <CgMail className="email" />
@@ -55,7 +61,7 @@ const GetInTouch = () => {
                   <p>manish119427@gmail.com</p>
                 </span>
               </div>
-              <div className="iconsCont">
+              <div id="contact-phone" className="iconsCont">
                 <span>
                   <BsFillTelephoneFill className="phone" />
                 </span>

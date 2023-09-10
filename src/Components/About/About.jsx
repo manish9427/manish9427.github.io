@@ -15,20 +15,20 @@ import resume from "../../assets/Manish-Verma-Resume.pdf";
 export const About = () => {
   return (
     <>
-      <div className="about center">
+      <div id="about" class="about section" className="about center">
         <h1 data-aos="fade-right" className="mobileHead">
           Hello, I am <span className="about__name">Manish Verma</span>
         </h1>
         <Type />
         <p className="about__desc" data-aos="fade-right">
-          Aspiring Full Stack Web Developer- Team player with leadership
-          quality, Quick learner, working extensively on MERN, HTML, CSS, and
-          JavaScript looking forward to working in a product-based company.
-          Attired with a variety of tools & technologies and keen to learn new
-          one.
+          Aspiring Full-Stack Web Developer in MERN with a strong passion for
+          technology and a deep desire to learn and grow. Passionate about
+          building high-quality, elegant, user-friendly, intuitive websites and
+          applications that delight users and exceed client expectations.
         </p>
         <div className="about__contact center">
           <a
+            id="contact-github"
             href="https://github.com/manish9427"
             aria-label="github"
             target="_blank"
@@ -38,6 +38,7 @@ export const About = () => {
             <GitHubIcon />
           </a>
           <a
+            id="contact-email"
             href="mailto:manish119427@gmail.com"
             target="_blank"
             rel="noreferrer"
@@ -47,6 +48,7 @@ export const About = () => {
             <EmailIcon />
           </a>
           <a
+            id="contact-phone"
             href="tel:+91-7355119427"
             target="_blank"
             rel="noreferrer"
@@ -56,6 +58,7 @@ export const About = () => {
             <PhoneIcon />
           </a>
           <a
+            id="contact-linkedin"
             href="https://www.linkedin.com/in/manish-verma-9626701b5/"
             aria-label="linkedin"
             className="link link--icon"

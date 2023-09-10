@@ -25,30 +25,30 @@ export const Techstacks = () => {
     <>
       <div className="section main" data-aos="fade-right">
         <h2 className="section__title different">TECH STACKS</h2>
-        <div className="techsection">
-          <div>
+        <div class="skills-card" className="techsection">
+          <div class="skills-card-img">
             <SiHtml5 />
-            <h5>HTML</h5>
+            <h5 class="skills-card-name">HTML</h5>
           </div>
-          <div>
+          <div class="skills-card-img">
             <DiCss3 />
-            <h5>CSS</h5>
+            <h5 class="skills-card-name">CSS</h5>
           </div>
-          <div>
+          <div class="skills-card-img">
             <SiJavascript />
-            <h5>Javascript</h5>
+            <h5 class="skills-card-name">Javascript</h5>
           </div>
-          <div>
+          <div class="skills-card-img">
             <FaReact />
-            <h5>React</h5>
+            <h5 class="skills-card-name">React</h5>
           </div>
-          <div>
+          <div class="skills-card-img">
             <SiRedux />
-            <h5>Redux</h5>
+            <h5 class="skills-card-name">Redux</h5>
           </div>
-          <div>
+          <div class="skills-card-img">
             <SiChakraui />
-            <h5>Chakra UI</h5>
+            <h5 class="skills-card-name">Chakra UI</h5>
           </div>
           <div>
             <VscGithub />
