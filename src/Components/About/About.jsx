@@ -68,7 +68,7 @@ export const About = () => {
             <LinkedInIcon />
           </a>
           <a
-            href="https://twitter.com/Manish4387"
+            href="https://twitter.com/verma9427"
             aria-label="twitter"
             className="link link--icon"
             target="_blank"

@@ -77,7 +77,7 @@ export const Navbar = () => {
             >
               <a
                 id="resume-link-1"
-                href="https://drive.google.com/file/d/1TDHLGPx4B30QWqWZQOz0Ql9wkeHSxmOy/view"
+                href="https://drive.google.com/file/d/1wdU1CxLO2XwZRAkIHtyR_Kvtk9NudVc7/view?usp=sharing"
                 onClick={toggleNavList}
                 className="link link--nav"
                 target="_blank"
