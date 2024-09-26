@@ -112,7 +112,7 @@ export const Projects = () => {
                 <div>
                   <a
                     class="project-deployed-link"
-                    href="https://farfetchclone.netlify.app/"
+                    href="https://farfetch-eight.vercel.app/"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -122,7 +122,7 @@ export const Projects = () => {
                   </a>
                   <a
                     class="project-github-link"
-                    href="https://github.com/HIMANSHUMISHRA389/Farfetch"
+                    href="https://github.com/manish9427/Farfetch"
                     target="_blank"
                     rel="noreferrer"
                   >
