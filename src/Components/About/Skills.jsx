@@ -1,51 +1,39 @@
 import React from "react";
-import "./Introduction.css";
 import "./Skills.css";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
-import { ThemeContext } from "../../Context/theme";
 
 const Skills = () => {
-  const [{ themename }] = React.useContext(ThemeContext);
+  const skills = [
+    "Frontend Development",
+    "React.js & Next.js",
+    "TypeScript & JavaScript",
+    "Node.js, Nest.js & Express.js",
+    "REST APIs & Microservices",
+    "PostgreSQL & MongoDB",
+    "Redis & Database Optimization",
+    "AWS, Docker & Kubernetes",
+    "Data Structures & Algorithms",
+    "System Design",
+    "OOP, SOLID Principles & Design Patterns",
+    "Authentication & Authorization",
+    "Responsive Web Development",
+    "Git & CI/CD",
+    "Agile Development",
+  ];
+
   return (
-    <div id="skills" style={{ marginTop: "10rem" }}>
+    <div id="skills" className="skills">
       <h2 className="section__title different">SKILLS</h2>
-      <div style={{ paddingLeft: "35%" }}>
-        <h4 className="different">
-          <span className="icons">
-            <ExitToAppIcon />
-          </span>
-          FrontEnd Development{" "}
-        </h4>
-        <h4 className="different">
-          <span className="icons">
-            <ExitToAppIcon />
-          </span>
-          Data Structure Algorithm{" "}
-        </h4>
-        <h4 className="different">
-          <span className="icons">
-            <ExitToAppIcon />
-          </span>
-          Online Collaboration{" "}
-        </h4>
-        <h4 className="different">
-          <span className="icons">
-            <ExitToAppIcon />
-          </span>
-          Responsive Layouts{" "}
-        </h4>
-        <h4 className="different">
-          <span className="icons">
-            <ExitToAppIcon />
-          </span>
-          Communication Skills{" "}
-        </h4>
-        <h4 className="different">
-          <span className="icons">
-            <ExitToAppIcon />
-          </span>
-          Individual & Team Player{" "}
-        </h4>
+
+      <div className="skills__container">
+        {skills.map((skill, index) => (
+          <h4 className="different skills__item" key={index}>
+            <span className="icons">
+              <ExitToAppIcon />
+            </span>
+            {skill}
+          </h4>
+        ))}
       </div>
     </div>
   );

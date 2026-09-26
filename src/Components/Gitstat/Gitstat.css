@@ -1,70 +1,52 @@
-.main_box {
-    width: 80%;
-    margin: auto;
-    padding: 30px 0;
+.gitstat-section {
+  width: 100%;
+  margin-top: 6rem;
+  text-align: center;
 }
 
+.gitstat-container {
+  width: 90%;
+  max-width: 700px;
+  margin: 3rem auto 0;
 
-
-.box1 {
-    display: flex;
-    justify-content: center;
-    padding: 20px 0;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.box2 {
-    display: flex;
-    justify-content: center;
-
+.gitstat-card {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-img {
-    width: auto;
+.gitstat-card a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
-@media all and (max-width: 800px) and (min-width: 375px) {
-
-    .box2 {
-        margin: auto;
-        width: 80%;
-        display: grid;
-        /* justify-content: center; */
-        place-items: center;
-        grid-template-columns: repeat(1,1fr);
-        grid-template-rows: repeat(1,1fr);
-        
-        
-    }
-    .box1{
-        margin: auto;
-        
-    }
-
-    img {
-        width: auto;
-    }
+.gitstat-card img {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px;
 }
 
-@media all and (max-width: 375px) and (min-width: 80px) {
-.box1{
-    /* width: 60%; */
-    margin: auto;
-    place-items: center;
-}
-.box2{
-    margin: auto;
-    width: 80%;
-    display: grid;
-        place-items: center;
-        grid-template-columns: repeat(1,1fr);
-        grid-template-rows: repeat(1,1fr);
-        
-}
-    img {
-        width: auto;
-        /* padding: 5px;
-        margin-left: 25px; */
-     
-    }
+@media (max-width: 500px) {
+  .gitstat-section {
+    margin-top: 4rem;
+  }
+
+  .gitstat-container {
+    width: 95%;
+    margin-top: 2rem;
+  }
+
+  .gitstat-card img {
+    max-width: 100%;
+  }
 }

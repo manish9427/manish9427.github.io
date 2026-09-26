@@ -1,42 +1,97 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 1001;
+}
 .nav__list {
-    margin-right: 1.5em;
+  margin: 0 1.5em 0 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+.nav__list-item {
+  margin-left: 1.5em;
+}
+.nav__list-item:first-child {
+  margin-left: 0;
+}
+.nav__theme {
+  margin-top: 0.4em;
+  position: relative;
+  z-index: 1002;
+}
+.nav__hamburger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  z-index: 1003;
+} /* ========================= MOBILE NAVBAR ========================= */
+@media (max-width: 800px) {
+  .nav {
+    position: relative;
+    z-index: 1001;
+  } /* Hide normal menu */
+  .nav__list {
+    display: none;
+  } /* Open menu */
+  .nav__list--open {
     display: flex;
-    
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 70px;
+    right: 15px;
+    width: 220px;
+    margin: 0;
+    padding: 1.5rem 1rem;
+    background: var(--clr-bg);
+    border: 1px solid var(--clr-primary);
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
   }
   .nav__list-item {
-    margin-left: 1.5em;
+    width: 100%;
+    margin: 0.5rem 0;
+    text-align: center;
   }
-  .app .nav__hamburger {
-    display: none;
-    border: 2px solid black;
-  }
+  .nav__list-item .link--nav {
+    display: block;
+    width: 100%;
+    padding: 0.7rem 0;
+    font-size: 1.05rem;
+  } /* Hamburger */
+  .nav__hamburger {
+    display: flex;
+    margin-left: 0.8rem;
+    position: relative;
+    z-index: 10000;
+  } /* Theme button */
   .nav__theme {
-    margin-top: 0.4em;
+    position: relative;
+    z-index: 10000;
   }
-
- 
- 
-  
-  @media (max-width: 800px) {
-    .nav__list {
-      display: none;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      position: fixed;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 2;
-    }
-  
-    .nav__list-item {
-      margin: 0.5em 0;
-    }
-  
-    .app .nav__hamburger {
-      display: flex;
-      z-index: 2;
-      margin-left: 0.8em;
-    }
+} /* ========================= SMALL MOBILE ========================= */
+@media (max-width: 500px) {
+  .nav__list--open {
+    top: 60px;
+    right: 10px;
+    width: 200px;
   }
+  .nav__list-item {
+    margin: 0.4rem 0;
+  }
+  .nav__list-item .link--nav {
+    font-size: 1rem;
+  }
+  .nav__hamburger {
+    margin-left: 0.5rem;
+  }
+}

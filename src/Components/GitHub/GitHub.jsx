@@ -3,37 +3,19 @@ import GitHubCalendar from "react-github-calendar";
 import "./GitHub.css";
 
 const GitHub = () => {
-  // const selectLastHalfYear = contributions => {
-  //   const currentYear = new Date().getFullYear();
-  //   const currentMonth = new Date().getMonth();
-  //   const shownMonths = 9;
-
-  //   return contributions.filter(day => {
-  //     const date = new Date(day.date);
-  //     const monthOfDay = date.getMonth();
-
-  //     return (
-  //       date.getFullYear() === currentYear &&
-  //       monthOfDay > currentMonth - shownMonths &&
-  //       monthOfDay <= currentMonth
-  //     );
-  //   });
-  // };
-
   return (
-    <div>
+    <section className="github-section">
       <h2 className="section__title different">DAYS I CODE</h2>
 
-      <div class="react-activity-calendar" className="github_Calender">
+      <div className="github_Calender">
         <GitHubCalendar
-          style={{ margin: "auto" }}
           username="manish9427"
-
-          // transformData={selectLastHalfYear}
-          //hideColorLegend
+          blockSize={12}
+          blockMargin={4}
+          fontSize={14}
         />
       </div>
-    </div>
+    </section>
   );
 };
 

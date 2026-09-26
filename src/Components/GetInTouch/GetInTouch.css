@@ -1,167 +1,110 @@
+.contactMain {
+  width: 90%;
+  max-width: 1100px;
+  margin: 3rem auto 0;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+
+  align-items: center;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .contactcontainer {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 2em;
-    width: 450px;
-    border-radius: 20px;
-    background-color: transparent;
-    margin: 10px;
-    
-    margin-bottom: 10px;
-    
-  }
-  
-  .contactcontainer svg {
-    font-size: 3em;
-    transition: all 0.5s ease-in-out 0s;
-    color: var(--clr-primary);
-    padding: 5px;
-    border-radius: 20%;
-  }
-  .mailNumber .email {
-    font-size: 2em;
-    transition: all 0.5s ease-in-out 0s;
-    color: var(--clr-primary);
-  }
-  .mailNumber .phone{
-    font-size: 1.5em;
-    transition: all 0.5s ease-in-out 0s;
-    color: var(--clr-primary);
-  }
-  
-  .mailNumber > div{
-    display: flex;
-    flex-direction: row;
-    /* justify-content: center;
-    align-content: center; */
-  }
-  
-  .mailNumber p{
-    margin: 5px;
-  }
-  .contactcontainer svg:hover {
-    font-size: 3rem;
-  }
-  .linkedin:hover {
-    color: #0a66c2;
-  }
-  .github:hover {
-    color: black;
-  }
-  .email:hover {
-    color: #d93025;
-  }
-  .twitter:hover {
-    color: rgb(29, 155, 240);
-  }
-  .phone:hover {
-    color: rgb(8, 216, 36);
-  }
-  
-  .mailNumber{
-    border-radius: 20px;
-    background-color: transparent;
-    margin: auto;
-    width: 500px;
-    display: flex;
-    justify-content: space-between;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
 
-  /* .contactMain{
+.contactcontainer a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 2rem;
+  transition: transform 0.2s ease;
+}
+
+.contactcontainer a:hover {
+  transform: translateY(-4px);
+}
+
+.linkedin,
+.github,
+.email,
+.phone {
+  color: var(--clr-primary);
+}
+
+.mailNumber {
+  margin-top: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contactDetail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.contactDetail p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.contactDetail svg {
+  font-size: 1.3rem;
+}
+
+.email-box {
+  width: 100%;
+}
+
+/* Tablet */
+@media (max-width: 800px) {
+  .contactMain {
     width: 90%;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    margin: auto;
-  } */
-
-  .contactMain{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    margin: auto;
+    grid-template-columns: 1fr;
+    gap: 3rem;
   }
 
-  @media all and (max-width: 800px) and (min-width: 375px)  {
-    .contactcontainer svg {
-      font-size: 2em;
-    }
-    .contactcontainer{
-      margin: auto;
-      width: 60%;
-    }
-    .mailNumber{
-      width: 100%;
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-    }
-    .mailNumber div{
-      justify-content: center;
-      align-content: center;
-      text-align: center;
-    }
-    .contactMain{
-      width: 100%;
-      display: flex;
-      /* justify-content: space-evenly; */
-      flex-direction: column;
-      margin: 0px;
-      margin: auto;
-    }
-    .email-box{
-      /* margin-left: 30%; */
-      place-items: center;
-      margin: auto;
-    }
-    .iconsCont{
-      width: 90%
-    }
-    .contactcontainer svg:hover {
-      font-size: 3rem;
-    }
+  .contactInfo {
+    order: 1;
   }
 
-  /* @media (max-width: 375px){
-    .email-box{
-      margin-left: 10%;
-    }
-  } */
+  .email-box {
+    order: 2;
+  }
+}
 
-
-  @media all and (max-width: 375px) and (min-width: 80px)  {
-    .contactcontainer svg {
-      font-size: 2em;
-    }
-    .contactcontainer{
-      width: 100%;
-    }
-    .mailNumber{
-      width: 100%;
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-    }
-    .mailNumber div{
-      justify-content: center;
-      align-content: center;
-      text-align: center;
-    }
-    .contactMain{
-      width: 100%;
-      display: flex;
-      /* justify-content: center; */
-      flex-direction: column;
-      margin: 0px;
-      margin: auto;
-    }
-    .email-box{
-      /* margin-left: 30%; */
-      place-items: center;
-      margin: auto;
-    }
-    .iconsCont{
-      width: 90%
-    }
-    .contactcontainer svg:hover {
-      font-size: 3rem;
-    }
+/* Mobile */
+@media (max-width: 500px) {
+  .contactMain {
+    width: 95%;
+    margin-top: 2rem;
+    gap: 2.5rem;
   }
 
+  .contactcontainer {
+    gap: 1.2rem;
+  }
+
+  .contactcontainer a {
+    font-size: 1.7rem;
+  }
+
+  .contactDetail p {
+    font-size: 0.9rem;
+  }
+}
