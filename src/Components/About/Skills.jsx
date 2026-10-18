@@ -4,21 +4,21 @@ import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 
 const Skills = () => {
   const skills = [
-    "Frontend Development",
+    "Front-End Technologies",
     "React.js & Next.js",
     "TypeScript & JavaScript",
+    "Java 17 & Spring Boot",
     "Node.js, Nest.js & Express.js",
-    "REST APIs & Microservices",
-    "PostgreSQL & MongoDB",
-    "Redis & Database Optimization",
-    "AWS, Docker & Kubernetes",
+    "RESTful APIs & Microservices",
+    "MySQL, PostgreSQL & MongoDB",
+    "Redis, Flyway & Query Optimization",
+    "AWS, Docker & CI/CD",
+    "Spring Security & Authentication",
     "Data Structures & Algorithms",
-    "System Design",
-    "OOP, SOLID Principles & Design Patterns",
-    "Authentication & Authorization",
-    "Responsive Web Development",
-    "Git & CI/CD",
-    "Agile Development",
+    "System Design & Design Patterns",
+    "OOP & Object-Oriented Programming",
+    "Core Web Vitals Optimization",
+    "Agile/Scrum & JIRA",
   ];
 
   return (

@@ -26,12 +26,13 @@ export const About = () => {
         <Type />
 
         <p className="about__desc" data-aos="fade-right">
-          Full-Stack Engineer with 2.6 years of experience building scalable
-          web applications and microservices. Experienced in React.js,
-          Next.js, TypeScript, Node.js, Nest.js, and Express.js, with hands-on
-          experience in PostgreSQL, MongoDB, Redis, AWS, Docker, and Kubernetes.
-          Passionate about clean code, scalable architecture, performance
-          optimization, and building reliable user experiences.
+          Versatile Full Stack Software Engineer with 2.6 years of experience
+          designing, developing, and scaling high-concurrency enterprise web
+          platforms and distributed microservices. Experienced across the full
+          software delivery lifecycle using React.js, Next.js, TypeScript,
+          Java 17, Spring Boot, Node.js, and Nest.js. Skilled in performance
+          optimization, design patterns, distributed systems, and modern DevOps
+          workflows.
         </p>
 
         <div className="about__contact center">

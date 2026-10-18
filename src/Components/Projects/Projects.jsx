@@ -17,6 +17,8 @@ import {
   SiMaterialui,
   SiNodedotjs,
   SiVercel,
+  SiSpring,
+  SiMysql,
 } from "react-icons/si";
 import { DiCss3 } from "react-icons/di";
 import { VscJson } from "react-icons/vsc";
@@ -27,6 +29,50 @@ export const Projects = () => {
       <div id="projects" className="section">
         <h2 className="section__title different">Projects</h2>
         <div className="allProjects">
+          <div
+            class="project-card"
+            className="projects_container"
+            data-aos="fade-right"
+          >
+            <div className="project">
+              <div className="project_videocontainer">
+                <div>
+                  <img
+                    src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=80"
+                    alt="Payment Validation Service"
+                  />
+                </div>
+              </div>
+              <div className="project_information">
+                <h2 class="project-title">Payment Validation Service</h2>
+                <p class="project-description">
+                  Built a high-throughput transaction verification microservice
+                  for real-time fraud detection. Secured APIs and inter-service
+                  payloads using HMAC-SHA256 and Spring Security, while reducing
+                  validation latency by approximately 35% through SQL
+                  optimization and B-tree composite indexes.
+                </p>
+                <div class="project-tech-stack">
+                  <SiSpring />
+                  <SiMysql />
+                  <SiNodedotjs />
+                  <SiPostman />
+                </div>
+                <div>
+                  <a
+                    class="project-github-link"
+                    href="https://github.com/manish9427/payment-validation-service"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span type="button" className="btns onbt">
+                      View Code
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
           <div
             class="project-card"
             className="projects_container"

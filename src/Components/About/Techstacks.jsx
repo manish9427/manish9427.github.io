@@ -16,14 +16,17 @@ import {
   SiPostgresql,
   SiMongodb,
   SiRedis,
-  SiKubernetes,
   SiGit,
   SiGithub,
   SiGitlab,
   SiPostman,
   SiMaterialui,
   SiJenkins,
+  SiSpring,
+  SiMysql,
 } from "react-icons/si";
+
+import { FaJava } from "react-icons/fa";
 
 export const Techstacks = () => {
   const techStacks = [
@@ -60,6 +63,14 @@ export const Techstacks = () => {
       name: "Material UI",
     },
     {
+      icon: <FaJava />,
+      name: "Java 17",
+    },
+    {
+      icon: <SiSpring />,
+      name: "Spring Boot",
+    },
+    {
       icon: <SiNodedotjs />,
       name: "Node.js",
     },
@@ -70,6 +81,10 @@ export const Techstacks = () => {
     {
       icon: <SiExpress />,
       name: "Express.js",
+    },
+    {
+      icon: <SiMysql />,
+      name: "MySQL",
     },
     {
       icon: <SiPostgresql />,
@@ -90,10 +105,6 @@ export const Techstacks = () => {
     {
       icon: <FaDocker />,
       name: "Docker",
-    },
-    {
-      icon: <SiKubernetes />,
-      name: "Kubernetes",
     },
     {
       icon: <SiGit />,

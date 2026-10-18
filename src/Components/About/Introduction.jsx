@@ -25,36 +25,38 @@ export const Introduction = () => {
             <h4>
               Hi Everyone 👋 My name is{" "}
               <span className="different">Manish Verma</span>. I am a{" "}
-              <span className="different">Full-Stack Engineer</span> with{" "}
-              <span className="different">2.6 years of experience</span>{" "}
-              building and scaling web platforms and microservices.
+              <span className="different">Full Stack Software Engineer</span>{" "}
+              with <span className="different">2.6 years</span> of experience
+              designing, developing, and scaling high-concurrency enterprise web
+              platforms and distributed microservices.
             </h4>
 
             <h4>
               I specialize in{" "}
               <span className="different">
-                React.js, Next.js, TypeScript, Node.js, Nest.js, and Express.js
+                React.js, Next.js, TypeScript, Java 17, Spring Boot, Node.js,
+                Nest.js, and Express.js
               </span>
-              , with hands-on experience working with{" "}
+              , with hands-on experience in{" "}
               <span className="different">
-                PostgreSQL, MongoDB, Redis, AWS, Docker, and Kubernetes
+                MySQL, PostgreSQL, MongoDB, Redis, Docker, AWS, and CI/CD
               </span>
               .
             </h4>
 
             <h4>
               At <span className="different">Lycadigital</span>, I have worked
-              on multi-region platforms across{" "}
+              on multi-region web applications across{" "}
               <span className="different">16 countries</span>, building
-              reusable UI components, REST APIs, microservices, payment
-              integrations, authentication systems, and real-time applications.
+              reusable UI systems, secure APIs, distributed microservices, and
+              dynamic content-driven product experiences.
             </h4>
 
             <h4>
               I am passionate about{" "}
               <span className="different">
-                scalable architecture, clean code, system design, performance
-                optimization, and building reliable user experiences
+                scalable architecture, clean code, system design, design
+                patterns, performance optimization, and reliable user experiences
               </span>
               .
             </h4>
