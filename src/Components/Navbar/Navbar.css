@@ -5,24 +5,35 @@
   position: relative;
   z-index: 1001;
 }
+
 .nav__list {
-  margin: 0 1.5em 0 0;
+  margin: 0 1.4em 0 0;
   padding: 0;
   display: flex;
   align-items: center;
   list-style: none;
 }
+
 .nav__list-item {
-  margin-left: 1.5em;
+  margin-left: 1.6em;
 }
+
 .nav__list-item:first-child {
   margin-left: 0;
 }
+
+/* Resume link reads as the one accent item in the nav */
+#resume-button-2 .link--nav {
+  color: var(--clr-primary);
+  font-weight: 700;
+}
+
 .nav__theme {
-  margin-top: 0.4em;
+  margin-top: 0;
   position: relative;
   z-index: 1002;
 }
+
 .nav__hamburger {
   display: none;
   align-items: center;
@@ -32,65 +43,70 @@
   cursor: pointer;
   position: relative;
   z-index: 1003;
-} /* ========================= MOBILE NAVBAR ========================= */
+}
+
+/* ========================= MOBILE NAVBAR ========================= */
 @media (max-width: 800px) {
-  .nav {
-    position: relative;
-    z-index: 1001;
-  } /* Hide normal menu */
   .nav__list {
     display: none;
-  } /* Open menu */
+  }
+
   .nav__list--open {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: fixed;
-    top: 70px;
+    top: 66px;
     right: 15px;
-    width: 220px;
+    width: 230px;
     margin: 0;
-    padding: 1.5rem 1rem;
-    background: var(--clr-bg);
-    border: 1px solid var(--clr-primary);
-    border-radius: 10px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    padding: 1.2rem 1rem;
+    background: var(--clr-bg-alt);
+    border: 1px solid var(--clr-line);
+    border-top: 2px solid var(--clr-primary);
+    border-radius: 4px;
+    box-shadow: 0 16px 40px var(--clr-shadow);
     z-index: 9999;
   }
+
   .nav__list-item {
     width: 100%;
-    margin: 0.5rem 0;
+    margin: 0.35rem 0;
     text-align: center;
   }
+
   .nav__list-item .link--nav {
     display: block;
     width: 100%;
     padding: 0.7rem 0;
-    font-size: 1.05rem;
-  } /* Hamburger */
+    font-size: 1.02rem;
+  }
+
   .nav__hamburger {
     display: flex;
     margin-left: 0.8rem;
     position: relative;
     z-index: 10000;
-  } /* Theme button */
+  }
+
   .nav__theme {
     position: relative;
     z-index: 10000;
   }
-} /* ========================= SMALL MOBILE ========================= */
+}
+
+/* ========================= SMALL MOBILE ========================= */
 @media (max-width: 500px) {
   .nav__list--open {
-    top: 60px;
+    top: 56px;
     right: 10px;
     width: 200px;
   }
-  .nav__list-item {
-    margin: 0.4rem 0;
-  }
+
   .nav__list-item .link--nav {
-    font-size: 1rem;
+    font-size: 0.98rem;
   }
+
   .nav__hamburger {
     margin-left: 0.5rem;
   }

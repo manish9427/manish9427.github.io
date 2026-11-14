@@ -1,13 +1,12 @@
 .gitstat-section {
   width: 100%;
-  margin-top: 6rem;
-  text-align: center;
+  text-align: left;
 }
 
 .gitstat-container {
-  width: 90%;
+  width: 100%;
   max-width: 700px;
-  margin: 3rem auto 0;
+  margin: 0 auto;
 
   display: flex;
   justify-content: center;
@@ -33,20 +32,15 @@
   width: 100%;
   max-width: 500px;
   height: auto;
-  border-radius: 8px;
+  border-radius: 4px;
+  border: 1px solid var(--clr-line);
+  background: var(--clr-bg-alt);
+  padding: 0.5rem;
 }
 
 @media (max-width: 500px) {
-  .gitstat-section {
-    margin-top: 4rem;
-  }
-
-  .gitstat-container {
-    width: 95%;
-    margin-top: 2rem;
-  }
-
   .gitstat-card img {
     max-width: 100%;
+    padding: 0.3rem;
   }
 }

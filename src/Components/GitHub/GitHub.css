@@ -1,20 +1,22 @@
 .github-section {
   width: 100%;
-  margin-top: 5rem;
-  text-align: center;
+  text-align: left;
 }
 
 .github_Calender {
-  width: 95%;
+  width: 100%;
   max-width: 1000px;
-  margin: 3rem auto 0;
+  margin: 0 auto;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
   overflow-x: auto;
-  padding: 1rem 0;
+  padding: 1.5rem 1rem;
+  border: 1px solid var(--clr-line);
+  border-radius: 4px;
+  background: var(--clr-bg-alt);
 }
 
 /* GitHub Calendar */
@@ -22,30 +24,8 @@
   max-width: 100%;
 }
 
-/* Tablet */
 @media (max-width: 800px) {
-  .github-section {
-    margin-top: 4rem;
-  }
-
   .github_Calender {
-    width: 95%;
     justify-content: flex-start;
-    overflow-x: auto;
-  }
-}
-
-/* Mobile */
-@media (max-width: 500px) {
-  .github-section {
-    margin-top: 3rem;
-  }
-
-  .github_Calender {
-    width: 100%;
-    padding: 1rem 0.5rem;
-
-    justify-content: flex-start;
-    overflow-x: auto;
   }
 }

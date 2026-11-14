@@ -1,6 +1,6 @@
 .header {
   width: 100%;
-  min-height: 70px;
+  min-height: 68px;
 
   display: flex;
   justify-content: space-between;
@@ -13,32 +13,53 @@
   top: 0;
   z-index: 1000;
 
-  background: var(--clr-bg);
+  background: color-mix(in srgb, var(--clr-bg) 82%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--clr-line);
 }
 
 .header__logo {
   margin: 0;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
 }
 
 .header__logo .link {
-  color: var(--clr-fg);
+  color: var(--clr-fg-alt);
   font-weight: 700;
   text-decoration: none;
+  padding-bottom: 0;
+}
+
+/* Accent tick before the wordmark — the thread starts here */
+.header__logo .link::after {
+  content: "";
+  display: inline-block;
+  width: 0.45em;
+  height: 0.45em;
+  margin-left: 0.35em;
+  background: var(--clr-primary);
+  transform: translateY(-0.05em);
 }
 
 .header__logo .link:hover {
   color: var(--clr-primary);
 }
 
+.header__logo .link:hover::after {
+  background: var(--clr-fg-alt);
+}
+
 @media (max-width: 800px) {
   .header {
-    min-height: 60px;
+    min-height: 58px;
     padding: 0 4%;
   }
 
   .header__logo {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
   }
 }
 
@@ -48,6 +69,6 @@
   }
 
   .header__logo {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
   }
 }

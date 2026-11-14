@@ -9,7 +9,7 @@ export const Header = () => {
   return (
     <header id="home" className={`header center ${themename}`}>
       <h3 className="header__logo">
-        <a href="#home" className="link">
+        <a href="#hero" className="link">
           Manish
         </a>
       </h3>

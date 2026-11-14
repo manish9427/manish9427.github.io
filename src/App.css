@@ -1,46 +1,62 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
 .app {
-  font-family: "Poppins", sans-serif;
-  line-height: 1.5;
+  font-family: var(--font-body, "Manrope", sans-serif);
+  line-height: 1.6;
   color: var(--clr-fg);
   background-color: var(--clr-bg);
-}
-
-.light {
-  --clr-bg: #fcfcfc;
-  --clr-bg-alt: #fff;
-  --clr-fg: rgb(70, 60, 60);
-  --clr-fg-alt: rgb(39, 39, 39);
-  --clr-primary: #5094f0;
-
-  --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-
-.dark {
-  --clr-bg: #0f0f0f;
-  --clr-bg-alt: #380b5e;
-  --clr-fg: #ded9df;
-  --clr-fg-alt: #d6d6fa;
-  --clr-primary: #837082;
-
-  --shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
-    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  min-height: 100vh;
 }
 
 main {
-  max-width: 1100px;
-  width: 95%;
+  max-width: 1140px;
+  width: 92%;
   margin: 0 auto;
 }
 
 .section {
-  margin-top: 5em;
+  margin-top: clamp(4rem, 9vw, 7rem);
+  scroll-margin-top: 4.75rem;
 }
 
+/* The header is sticky (68px desktop / 58px mobile). Every navbar jump has to
+   land *below* it, otherwise the section heading hides underneath the bar. */
+main [id] {
+  scroll-margin-top: 4.75rem;
+}
+
+/* ---- Section header: mono eyebrow + hairline, the ledger device ---- */
 .section__title {
-  text-align: center;
-  margin-bottom: 1em;
+  position: relative;
+  margin-bottom: 2.5rem;
   text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-family: var(--font-display);
+  padding-left: 1.1em;
+  text-align: left;
+}
+
+.section__title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0.6em;
+  height: 0.6em;
+  background: var(--clr-primary);
+}
+
+.section__title::after {
+  content: "";
+  display: block;
+  width: 100%;
+  max-width: 4rem;
+  height: 2px;
+  background: var(--clr-line);
+  margin-top: 0.9rem;
+}
+
+.different {
+  color: var(--clr-primary);
 }
 
 .center {
@@ -48,13 +64,15 @@ main {
   align-items: center;
 }
 
+/* ---- Links: quiet, underline draws in accent ---- */
 .link {
   color: var(--clr-primary);
   padding: 0 0 0.3em 0;
   position: relative;
 }
 
-.link:hover {
+.link:hover,
+.link:focus {
   color: var(--clr-primary);
 }
 
@@ -62,11 +80,11 @@ main {
   content: "";
   display: inline;
   width: 0%;
-  height: 0.2em;
+  height: 2px;
   position: absolute;
   bottom: 0;
   background-color: var(--clr-primary);
-  transition: width 0.2s ease-in;
+  transition: width 0.2s var(--ease-out);
 }
 
 .link:hover::before,
@@ -77,24 +95,32 @@ main {
 .link--nav {
   color: var(--clr-fg);
   font-weight: 500;
+  font-size: 0.92rem;
+  letter-spacing: 0.02em;
+}
+
+.link--nav:hover,
+.link--nav:focus {
+  color: var(--clr-primary);
 }
 
 .link--icon {
   color: var(--clr-fg);
 }
 
+/* ---- Buttons: sharp, hairline, engineering-precise ---- */
 .btn {
   display: block;
   cursor: pointer;
   padding: 0.8em 1.4em;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.9rem;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s var(--ease-out), color 0.2s var(--ease-out);
 }
 
 .btn--outline {
   color: var(--clr-primary);
-  border: 2px solid var(--clr-primary);
+  border: 1px solid var(--clr-primary);
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -114,7 +140,7 @@ main {
   left: 0;
   top: 0;
   z-index: -1;
-  transition: right 0.2s ease-in-out;
+  transition: right 0.2s var(--ease-out);
 }
 
 .btn--outline:hover:before,
@@ -125,12 +151,7 @@ main {
 .btn--plain {
   text-transform: initial;
   background-color: var(--clr-bg-alt);
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
-  border: 0;
-}
-
-.btn--plain:hover {
-  transform: translateY(-4px);
+  border: 1px solid var(--clr-line);
 }
 
 .btn--icon {
@@ -143,11 +164,11 @@ main {
 }
 
 .btn--icon:active {
-  transform: translateY(-5px);
+  transform: translateY(-3px);
 }
 
 @media (max-width: 600px) {
   .section {
-    margin-top: 4em;
+    margin-top: 4rem;
   }
 }

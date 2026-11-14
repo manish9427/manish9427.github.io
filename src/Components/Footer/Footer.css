@@ -1,34 +1,33 @@
+/* Footer — terminal sign-off line, hairline above */
 .footerSection {
   width: 100%;
-  margin-top: 5rem;
-  padding: 2rem 0;
+  margin-top: clamp(4rem, 9vw, 7rem);
+  padding: 2.2rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-top: 1px solid var(--clr-line);
 }
+
 .footerBox {
   text-align: center;
 }
+
 .footer {
   margin: 0;
-  font-size: 0.95rem;
-  color: var(--clr-fg-alt);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.03em;
+  color: var(--clr-muted);
 }
+
 .footerHeart {
-  color: red;
+  color: #e25555;
   background: transparent;
   margin: 0 4px;
 }
+
 .footerName {
   color: var(--clr-primary);
   font-weight: 600;
-} /* Mobile */
-@media (max-width: 500px) {
-  .footerSection {
-    margin-top: 3rem;
-    padding: 1.5rem 0;
-  }
-  .footer {
-    font-size: 0.85rem;
-  }
 }

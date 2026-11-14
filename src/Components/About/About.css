@@ -1,47 +1,87 @@
+/* Hero — typographic thesis: the name is the visual */
 .about {
   flex-direction: column;
-  margin-top: 3em;
-  text-align: center;
-  padding: 0 20px;
+  margin-top: clamp(3rem, 8vw, 6rem);
+  text-align: left;
+  padding: clamp(2rem, 6vw, 4rem) 4px clamp(2rem, 5vw, 3.5rem);
+  align-items: flex-start;
+  position: relative;
+
+  /* Blueprint ground: faint dot grid + one radial amber glow, top-left */
+  background-image: radial-gradient(
+      circle at 12% 0%,
+      var(--clr-primary-soft),
+      transparent 55%
+    ),
+    radial-gradient(var(--clr-line) 1px, transparent 1px);
+  background-size:
+    100% 100%,
+    28px 28px;
+  border: 1px solid var(--clr-line);
+  border-radius: 6px;
+  padding-left: clamp(1.4rem, 4vw, 3rem);
+  padding-right: clamp(1.4rem, 4vw, 3rem);
+}
+
+.about .mobileHead {
+  text-align: left;
+  max-width: 850px;
 }
 
 .about__name {
   color: var(--clr-primary);
 }
 
+/* Typewriter line — mono, the "status line" of the ledger */
 .about > :nth-child(2) {
-  margin-top: 1.2em;
-  font-size: 2rem;
-  line-height: 1.2;
-  color: var(--clr-fg-alt);
+  margin-top: 1.1em;
+  font-size: clamp(1.25rem, 2.4vw, 1.8rem);
+  line-height: 1.3;
+  color: var(--clr-fg);
+  font-family: var(--font-mono);
+  font-weight: 400;
+  letter-spacing: 0;
+  min-height: 1.3em;
 }
 
 .about__desc {
   width: 100%;
-  max-width: 850px;
-  font-size: 1rem;
-  line-height: 1.7;
-  text-align: center;
-  margin-top: 2.4em;
+  max-width: 65ch;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  text-align: left;
+  margin-top: 2.2em;
+  color: var(--clr-fg);
 }
 
 .about__contact {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   margin-top: 2em;
 }
 
 .about .link--icon {
-  margin-right: 0.8em;
+  margin-right: 0.7em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--clr-line);
+  transition: color 0.2s var(--ease-out), border-color 0.2s var(--ease-out),
+    transform 0.2s var(--ease-out);
+}
+
+.about .link--icon:hover,
+.about .link--icon:focus {
+  color: var(--clr-primary);
+  border-color: var(--clr-primary);
+  transform: translateY(-3px);
 }
 
 .about .link--icon:last-child {
   margin-right: 0;
-}
-
-.about .btn--outline {
-  margin-right: 1em;
 }
 
 .btnResume {
@@ -50,27 +90,29 @@
   justify-content: center;
   gap: 6px;
 
-  color: var(--clr-primary);
-  background-color: transparent;
+  color: var(--clr-bg);
+  background-color: var(--clr-primary);
 
-  border: 2px solid var(--clr-primary);
-  border-radius: 5px;
+  border: 1px solid var(--clr-primary);
+  border-radius: 2px;
 
-  min-height: 50px;
+  min-height: 48px;
   cursor: pointer;
 
-  padding: 0 25px;
-  margin-top: 20px;
+  padding: 0 28px;
+  margin-top: 28px;
 
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: var(--font-display);
+  letter-spacing: 0.03em;
 
-  transition: all 0.2s ease;
+  transition: filter 0.2s var(--ease-out), transform 0.2s var(--ease-out);
 }
 
 .btnResume:hover {
-  background-color: var(--clr-primary);
-  color: var(--clr-bg);
+  filter: brightness(1.12);
+  transform: translateY(-2px);
 }
 
 .resume-dwnld {
@@ -78,89 +120,36 @@
   font-size: 20px !important;
 }
 
-/* Tablet */
-@media (max-width: 1022px) {
-  .about {
-    margin-top: 2.5em;
-  }
-
-  .about > :nth-child(2) {
-    font-size: 1.7rem;
-  }
-
-  .about__desc {
-    max-width: 85%;
-  }
-}
-
-/* Mobile */
 @media (max-width: 800px) {
-  .about {
-    margin-top: 2em;
-    padding: 0 15px;
-  }
-
-  .mobileHead {
-    font-size: 2rem;
-    line-height: 1.3;
-    margin: 0;
-  }
-
-  .about > :nth-child(2) {
-    font-size: 1.4rem;
-    margin-top: 1em;
-  }
-
   .about__desc {
-    max-width: 95%;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-top: 1.8em;
+    max-width: 100%;
+    font-size: 1rem;
+    margin-top: 1.6em;
   }
 
   .about__contact {
-    margin-top: 1.8em;
+    margin-top: 1.6em;
   }
 
   .about .link--icon {
-    margin-right: 0.6em;
+    margin-right: 0.5em;
   }
 
   .btnResume {
     min-height: 46px;
-    padding: 0 20px;
-    margin-top: 15px;
+    padding: 0 22px;
+    margin-top: 20px;
   }
 }
 
-/* Small Mobile */
 @media (max-width: 375px) {
-  .about {
-    margin-top: 1.5em;
-    padding: 0 12px;
-  }
-
-  .mobileHead {
-    font-size: 1.7rem;
-    padding: 0;
-  }
-
-  .about > :nth-child(2) {
-    font-size: 1.2rem;
-  }
-
-  .about__desc {
-    max-width: 100%;
-    font-size: 0.9rem;
-    line-height: 1.6;
-  }
-
   .about__contact {
-    margin-top: 1.5em;
+    flex-wrap: wrap;
+    gap: 0.4rem;
   }
 
   .about .link--icon {
-    margin-right: 0.45em;
+    margin-right: 0.35em;
   }
 
   .btnResume {

@@ -22,7 +22,7 @@ const GetInTouch = () => {
         <div className={`contactInfo ${themename}`} data-aos="fade-right">
           <div className="contactcontainer">
             <a
-              id="contact-linkedin"
+              id="touch-linkedin"
               href="https://www.linkedin.com/in/manish9427/"
               target="_blank"
               rel="noreferrer"
@@ -32,7 +32,7 @@ const GetInTouch = () => {
             </a>
 
             <a
-              id="contact-github"
+              id="touch-github"
               href="https://github.com/manish9427"
               target="_blank"
               rel="noreferrer"
@@ -42,7 +42,7 @@ const GetInTouch = () => {
             </a>
 
             <a
-              id="contact-email"
+              id="touch-email"
               href="mailto:manish119427@gmail.com"
               aria-label="Email"
             >
@@ -56,7 +56,7 @@ const GetInTouch = () => {
               <p>manish119427@gmail.com</p>
             </div>
 
-            <div id="contact-phone" className="contactDetail">
+            <div id="touch-phone" className="contactDetail">
               <BsFillTelephoneFill className="phone" />
               <p>+91-7355119427</p>
             </div>

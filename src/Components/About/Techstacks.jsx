@@ -129,7 +129,7 @@ export const Techstacks = () => {
   ];
 
   return (
-    <div className="section main" data-aos="fade-right">
+    <div id="techstack" className="section main" data-aos="fade-right">
       <h2 className="section__title different">TECH STACKS</h2>
 
       <div className="techsection">

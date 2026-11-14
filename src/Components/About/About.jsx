@@ -14,10 +14,12 @@ import Skills from "./Skills";
 
 import resume from "../../assets/Manish-Verma-Resume.pdf";
 
+void resume; // local copy kept as backup; button downloads from Drive
+
 export const About = () => {
   return (
     <>
-      <div id="about" className="about center">
+      <div id="hero" className="about center">
         <h1 data-aos="fade-right" className="mobileHead">
           Hello, I am{" "}
           <span className="about__name">Manish Verma</span>
@@ -87,7 +89,12 @@ export const About = () => {
           </a>
         </div>
 
-        <a href={resume} download>
+        <a
+          id="resume-link-2"
+          href="https://drive.google.com/uc?export=download&id=1wdU1CxLO2XwZRAkIHtyR_Kvtk9NudVc7"
+          target="_blank"
+          rel="noreferrer"
+        >
           <button className="btnResume" type="button">
             Resume <GetAppIcon className="resume-dwnld" />
           </button>
@@ -96,13 +103,9 @@ export const About = () => {
 
       <Introduction />
 
-      <section id="techstack">
-        <Techstacks />
-      </section>
+      <Techstacks />
 
-      <section id="skills">
-        <Skills />
-      </section>
+      <Skills />
     </>
   );
 };

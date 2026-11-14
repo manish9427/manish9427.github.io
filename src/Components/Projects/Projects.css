@@ -1,91 +1,122 @@
+/* Projects — ledger rows: image left, spec text right, hairline frame */
 .projects_container {
-  width: min(90%, 1200px);
+  width: 100%;
   margin: 0 auto;
   background-color: transparent;
+}
+
+.allProjects {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
 .project {
   width: 100%;
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  border-radius: 26px;
-  border: 3px solid var(--clr-primary);
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  gap: 2.5rem;
+  align-items: center;
+
+  border: 1px solid var(--clr-line);
+  border-radius: 4px;
+  background: var(--clr-bg-alt);
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.02);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  transition: border-color 0.25s var(--ease-out);
 }
 
 .project:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.18);
+  border-color: var(--clr-primary);
 }
 
 .project_videocontainer {
-  padding: 1rem 1rem 0;
+  padding: 0;
+  align-self: center;
 }
 
+/* The screenshot is shown whole: the column hugs the image's own ratio
+   instead of cropping it to fill a fixed-height box. */
 .project_videocontainer > div {
   width: 100%;
-  height: 300px;
-  border-radius: 20px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--clr-bg);
+  border-radius: 0;
   overflow: hidden;
 }
 
 .project_videocontainer > div > img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   display: block;
-  border-radius: 20px;
+  border-radius: 0;
+  transition: transform 0.4s var(--ease-out);
+}
+
+.project:hover .project_videocontainer > div > img {
+  transform: scale(1.03);
 }
 
 .project_information {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  padding: 1.2rem 1.5rem 1.5rem;
-  text-align: center;
+  padding: 2rem 2.2rem 2rem 0;
+  text-align: left;
 }
 
 .project_information > h2 {
   margin: 0 0 0.8rem;
-  color: var(--clr-primary);
-  font-size: clamp(2rem, 2vw, 3rem);
+  color: var(--clr-fg-alt);
+  font-size: clamp(1.4rem, 2.4vw, 1.9rem);
   font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.project_information > h2::after {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 2px;
+  background: var(--clr-primary);
+  margin-top: 0.6rem;
 }
 
 .project_information > p {
   margin: 0;
   line-height: 1.7;
-  text-align: center;
-  font-size: 1.06rem;
+  font-size: 0.98rem;
+  color: var(--clr-fg);
 }
 
 .project_information > div:nth-child(3) {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 0.9rem;
-  margin: 1rem 0 1.1rem;
+  margin: 1.2rem 0 1.4rem;
 }
 
 .project_information > div:nth-child(3) > svg {
-  font-size: 2.4rem;
-  color: var(--clr-primary);
-  transition: transform 0.2s ease;
+  font-size: 1.7rem;
+  color: var(--clr-muted);
+  transition: color 0.2s var(--ease-out);
 }
 
 .project_information > div:nth-child(3) > svg:hover {
-  transform: scale(1.08);
+  color: var(--clr-primary);
 }
 
 .project_information > div:nth-child(4) {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 0.9rem;
   flex-wrap: wrap;
@@ -95,26 +126,29 @@
   margin: 0;
 }
 
+/* Buttons: flat, square, mono-labelled */
 .btns {
   color: var(--clr-primary);
-  border: 2px solid var(--clr-primary);
-  border-radius: 12px;
+  border: 1px solid var(--clr-primary);
+  border-radius: 2px;
   background: transparent;
   height: auto;
   cursor: pointer;
-  padding: 0.85rem 1.7rem;
+  padding: 0.7rem 1.5rem;
   margin-top: 0;
   display: inline-block;
-  transition: all 0.25s ease;
+  transition: background-color 0.2s var(--ease-out), color 0.2s var(--ease-out);
   text-decoration: none;
   font-weight: 700;
-  min-width: 160px;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  min-width: 130px;
   text-align: center;
 }
 
 .btns:hover {
   color: var(--clr-bg);
-  border-color: var(--clr-primary);
   background-color: var(--clr-primary);
 }
 
@@ -127,55 +161,28 @@
   display: none;
 }
 
-.allProjects {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.8rem;
-  align-items: stretch;
-}
-
-@media (max-width: 800px) {
-  .projects_container {
-    width: 100%;
-  }
-
-  .allProjects {
-    grid-template-columns: 1fr;
-    gap: 1.1rem;
-  }
-
+@media (max-width: 900px) {
   .project {
-    border-radius: 18px;
-  }
-
-  .project_videocontainer {
-    padding: 0.7rem 0.7rem 0;
+    grid-template-columns: 1fr;
+    gap: 0;
   }
 
   .project_videocontainer > div {
-    height: 220px;
+    height: auto;
   }
 
   .project_information {
-    padding: 1rem 1rem 1.2rem;
-  }
-
-  .project_information > h2 {
-    font-size: 1.8rem;
-  }
-
-  .project_information > p {
-    font-size: 0.97rem;
+    padding: 1.4rem 1.2rem 1.6rem;
   }
 
   .project_information > div:nth-child(4) {
     width: 100%;
     flex-direction: column;
+    align-items: stretch;
   }
 
   .btns {
     width: 100%;
     min-width: unset;
-    text-align: center;
   }
 }
