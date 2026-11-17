@@ -25,38 +25,44 @@ export const Introduction = () => {
             <h4>
               Hi Everyone 👋 My name is{" "}
               <span className="different">Manish Verma</span>. I am a{" "}
-              <span className="different">Full Stack Software Engineer</span>{" "}
-              with <span className="different">2.6 years</span> of experience
-              designing, developing, and scaling high-concurrency enterprise web
-              platforms and distributed microservices.
+              <span className="different">Full Stack Developer</span> with{" "}
+              <span className="different">2.6 years</span> of experience
+              designing, developing, and scaling web applications and
+              microservices using Node.js, Express.js, TypeScript, React.js,
+              and Next.js.
             </h4>
 
             <h4>
               I specialize in{" "}
               <span className="different">
-                React.js, Next.js, TypeScript, Java 17, Spring Boot, Node.js,
-                Nest.js, and Express.js
+                React.js, Next.js, Redux Toolkit, Material-UI, Node.js,
+                Express.js, TypeScript, and REST APIs
               </span>
               , with hands-on experience in{" "}
               <span className="different">
-                MySQL, PostgreSQL, MongoDB, Redis, Docker, AWS, and CI/CD
+                PostgreSQL, Sequelize, Redis, AWS, JWT, RBAC, and CI/CD
               </span>
               .
             </h4>
 
             <h4>
-              At <span className="different">Lycadigital</span>, I have worked
-              on multi-region web applications across{" "}
-              <span className="different">16 countries</span>, building
-              reusable UI systems, secure APIs, distributed microservices, and
-              dynamic content-driven product experiences.
+              At <span className="different">Lycadigital</span>, I architected
+              and developed a unified Next.js, React.js, and TypeScript frontend
+              for Lyca Mobile portals across{" "}
+              <span className="different">16 countries and 4 locales</span>{" "}
+              per market, built with JSON-based internationalization (i18n).
+              I also designed and maintained four Node.js/Express.js
+              microservices (Mediation, Profile, Rate, Common) supporting
+              transactions, payments, user lifecycle, and tariff management.
             </h4>
 
             <h4>
               I am passionate about{" "}
               <span className="different">
-                scalable architecture, clean code, system design, design
-                patterns, performance optimization, and reliable user experiences
+                multi-region web applications, performance optimization
+                (~50% LCP improvement), design patterns (Chain of
+                Responsibility, Factory, Builder), secure authentication, and
+                reliable user experiences
               </span>
               .
             </h4>

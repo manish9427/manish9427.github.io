@@ -1,7 +1,7 @@
 import React from "react";
 import "./Techstacks.css";
 
-import { FaReact, FaDocker, FaAws } from "react-icons/fa";
+import { FaReact } from "react-icons/fa";
 
 import {
   SiNextdotjs,
@@ -11,22 +11,20 @@ import {
   SiHtml5,
   SiCss3,
   SiNodedotjs,
-  SiNestjs,
   SiExpress,
   SiPostgresql,
-  SiMongodb,
   SiRedis,
   SiGit,
   SiGithub,
   SiGitlab,
-  SiPostman,
   SiMaterialui,
-  SiJenkins,
-  SiSpring,
-  SiMysql,
+  SiPm2,
+  SiSequelize,
+  SiAmazonaws,
+  SiJsonwebtokens,
+  SiJest,
+  SiJira,
 } from "react-icons/si";
-
-import { FaJava } from "react-icons/fa";
 
 export const Techstacks = () => {
   const techStacks = [
@@ -63,48 +61,40 @@ export const Techstacks = () => {
       name: "Material UI",
     },
     {
-      icon: <FaJava />,
-      name: "Java 17",
-    },
-    {
-      icon: <SiSpring />,
-      name: "Spring Boot",
-    },
-    {
       icon: <SiNodedotjs />,
       name: "Node.js",
-    },
-    {
-      icon: <SiNestjs />,
-      name: "Nest.js",
     },
     {
       icon: <SiExpress />,
       name: "Express.js",
     },
     {
-      icon: <SiMysql />,
-      name: "MySQL",
+      icon: <SiPm2 />,
+      name: "PM2",
     },
     {
       icon: <SiPostgresql />,
       name: "PostgreSQL",
     },
     {
-      icon: <SiMongodb />,
-      name: "MongoDB",
+      icon: <SiSequelize />,
+      name: "Sequelize",
     },
     {
       icon: <SiRedis />,
       name: "Redis",
     },
     {
-      icon: <FaAws />,
+      icon: <SiAmazonaws />,
       name: "AWS",
     },
     {
-      icon: <FaDocker />,
-      name: "Docker",
+      icon: <SiJsonwebtokens />,
+      name: "JWT",
+    },
+    {
+      icon: <SiJest />,
+      name: "Jest",
     },
     {
       icon: <SiGit />,
@@ -119,12 +109,8 @@ export const Techstacks = () => {
       name: "GitLab",
     },
     {
-      icon: <SiPostman />,
-      name: "Postman",
-    },
-    {
-      icon: <SiJenkins />,
-      name: "Jenkins",
+      icon: <SiJira />,
+      name: "Jira",
     },
   ];
 

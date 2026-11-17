@@ -6,11 +6,11 @@ export const Type = () => {
     <Typewriter
       options={{
         strings: [
-          "Full-Stack Engineer",
+          "Full Stack Developer",
           "React.js Developer",
           "Next.js Developer",
           "Node.js Developer",
-          "Nest.js Developer",
+          "TypeScript Developer",
         ],
         autoStart: true,
         loop: true,

@@ -28,13 +28,13 @@ export const About = () => {
         <Type />
 
         <p className="about__desc" data-aos="fade-right">
-          Versatile Full Stack Software Engineer with 2.6 years of experience
-          designing, developing, and scaling high-concurrency enterprise web
-          platforms and distributed microservices. Experienced across the full
-          software delivery lifecycle using React.js, Next.js, TypeScript,
-          Java 17, Spring Boot, Node.js, and Nest.js. Skilled in performance
-          optimization, design patterns, distributed systems, and modern DevOps
-          workflows.
+          Full Stack Developer with 2.6 years of experience designing,
+          developing, and scaling web applications and microservices using
+          Node.js, Express.js, TypeScript, React.js, and Next.js. Experienced
+          in building multi-region, multilingual portals deployed across 16
+          countries, developing REST APIs for payments, transactions, user
+          lifecycle, and tariff management, and managing production workloads
+          with PostgreSQL, Sequelize, Redis, and AWS.
         </p>
 
         <div className="about__contact center">
