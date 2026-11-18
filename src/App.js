@@ -17,6 +17,12 @@ function App() {
     Aos.init({ duration: 1500 });
   }, []);
 
+  // Mirror the theme class onto <body> so CSS variables cascade to it too.
+  React.useEffect(() => {
+    document.body.classList.remove("light", "dark");
+    document.body.classList.add(themename);
+  }, [themename]);
+
   // Anchor jumps are applied by the browser while the page is still settling.
   // Webfonts and images that land afterwards reflow the layout and leave the
   // section heading off screen, so re-apply the jump once things are stable.

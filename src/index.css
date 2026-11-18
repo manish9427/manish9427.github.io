@@ -1,36 +1,55 @@
 /* ================================================================
-   Design tokens — "engineering ledger" system
-   Ground: ink (dark) / paper (light). Accent: signal amber.
-   Type: Space Grotesk display · Manrope body · JetBrains Mono labels
+   Design tokens — "Liquid Glass" (macOS 27 Golden Gate)
+   Ground: frosted glass over a vibrant gradient.
+   Accent: system blue. Type: SF Pro-like (system stack).
    ================================================================ */
 
 :root,
 .dark {
-  --clr-bg: #0b0f14;
-  --clr-bg-alt: #121926;
-  --clr-fg: #c9d3dd;
-  --clr-fg-alt: #edf2f7;
-  --clr-primary: #e8a33d;
-  --clr-primary-soft: rgba(232, 163, 61, 0.12);
-  --clr-muted: #8b98a7;
-  --clr-line: rgba(237, 242, 247, 0.1);
-  --clr-shadow: rgba(0, 0, 0, 0.5);
-  --font-display: "Space Grotesk", sans-serif;
-  --font-body: "Manrope", sans-serif;
-  --font-mono: "JetBrains Mono", monospace;
-  --ease-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --clr-bg: #0a0a0f;
+  --clr-bg-alt: rgba(28, 28, 30, 0.55);
+  --clr-fg: #e5e5ea;
+  --clr-fg-alt: #ffffff;
+  --clr-primary: #0a84ff;
+  --clr-primary-soft: rgba(10, 132, 255, 0.18);
+  --clr-muted: #98989d;
+  --clr-line: rgba(255, 255, 255, 0.12);
+  --clr-shadow: rgba(0, 0, 0, 0.45);
+  --clr-glass: rgba(255, 255, 255, 0.06);
+  --clr-glass-strong: rgba(255, 255, 255, 0.12);
+  --clr-glass-border: rgba(255, 255, 255, 0.18);
+  --clr-glow: rgba(10, 132, 255, 0.35);
+
+  --font-display: -apple-system, "SF Pro Display", "SF Pro Text", "Helvetica Neue", system-ui, sans-serif;
+  --font-body: -apple-system, "SF Pro Text", "Helvetica Neue", system-ui, sans-serif;
+  --font-mono: "SF Mono", "JetBrains Mono", ui-monospace, monospace;
+
+  --ease-out: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --blur: 24px;
+  --blur-strong: 40px;
 }
 
 .light {
-  --clr-bg: #f6f4ee;
-  --clr-bg-alt: #ffffff;
-  --clr-fg: #3a4451;
-  --clr-fg-alt: #17202b;
-  --clr-primary: #a96a0f;
-  --clr-primary-soft: rgba(169, 106, 15, 0.1);
-  --clr-muted: #66707d;
-  --clr-line: rgba(23, 32, 43, 0.14);
-  --clr-shadow: rgba(23, 32, 43, 0.12);
+  --clr-bg: #f2f2f7;
+  --clr-bg-alt: rgba(255, 255, 255, 0.85);
+  --clr-fg: #1c1c1e;
+  --clr-fg-alt: #000000;
+  --clr-primary: #007aff;
+  --clr-primary-soft: rgba(0, 122, 255, 0.14);
+  --clr-muted: #3a3a3c;
+  --clr-line: rgba(0, 0, 0, 0.1);
+  --clr-shadow: rgba(0, 0, 0, 0.1);
+  /* Glass panels stay mostly opaque in daylight so text stays crisp */
+  --clr-glass: rgba(255, 255, 255, 0.82);
+  --clr-glass-strong: rgba(255, 255, 255, 0.92);
+  --clr-glass-border: rgba(0, 0, 0, 0.08);
+  --clr-glow: rgba(0, 122, 255, 0.2);
 }
 
 * {
@@ -38,7 +57,7 @@
   padding: 0;
   border: 0;
   outline: 0;
-  background-color: inherit;
+  background-color: transparent;
   color: inherit;
   font-family: inherit;
   font-size: inherit;
@@ -53,65 +72,77 @@ html {
 body {
   background-color: var(--clr-bg);
   color: var(--clr-fg);
+  min-height: 100vh;
 }
 
-h1,
-h2,
-h3,
-h4 {
+/* The theme class lives on .app, so scope the ground gradients there. */
+.app.dark {
+  background-image:
+    radial-gradient(1200px 800px at 15% -10%, rgba(10, 132, 255, 0.35), transparent 60%),
+    radial-gradient(900px 700px at 85% 10%, rgba(175, 82, 222, 0.3), transparent 60%),
+    radial-gradient(1000px 800px at 50% 110%, rgba(255, 69, 58, 0.22), transparent 60%);
+  background-attachment: fixed;
+}
+
+.app.light {
+  background-image:
+    radial-gradient(1200px 800px at 20% -10%, rgba(0, 122, 255, 0.06), transparent 60%),
+    radial-gradient(900px 700px at 80% 0%, rgba(175, 82, 222, 0.05), transparent 60%);
+  background-attachment: fixed;
+}
+
+h1, h2, h3, h4 {
   line-height: 1.15;
   color: var(--clr-fg-alt);
   font-family: var(--font-display);
   letter-spacing: -0.02em;
+  font-weight: 700;
 }
 
-h1 {
-  font-size: clamp(2.4rem, 6vw, 4.25rem);
-}
+h1 { font-size: clamp(2.4rem, 6vw, 4.25rem); }
+h2 { font-size: clamp(1.5rem, 3vw, 2.1rem); }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.3rem; }
 
-h2 {
-  font-size: clamp(1.5rem, 3vw, 2.1rem);
-}
+ul { list-style-type: none; }
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; font-family: inherit; }
 
-h3 {
-  font-size: 1.5rem;
-}
-
-h4 {
-  font-size: 1.3rem;
-}
-
-ul {
-  list-style-type: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-button {
-  cursor: pointer;
-}
-
-/* Visible focus, never removed */
 :focus-visible {
   outline: 2px solid var(--clr-primary);
   outline-offset: 3px;
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 ::selection {
   background: var(--clr-primary);
-  color: var(--clr-bg);
+  color: #fff;
 }
 
-/* Reduced motion: show finished states, kill all animation */
+/* Glass panel utility */
+.glass {
+  background: var(--clr-glass);
+  backdrop-filter: blur(var(--blur)) saturate(180%);
+  -webkit-backdrop-filter: blur(var(--blur)) saturate(180%);
+  border: 1px solid var(--clr-glass-border);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 8px 32px var(--clr-shadow);
+}
+
+.glass-strong {
+  background: var(--clr-glass-strong);
+  backdrop-filter: blur(var(--blur-strong)) saturate(180%);
+  -webkit-backdrop-filter: blur(var(--blur-strong)) saturate(180%);
+  border: 1px solid var(--clr-glass-border);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 12px 40px var(--clr-shadow);
+}
+
+/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  * {
-    animation: none !important;
-    transition: none !important;
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
   }
-  html {
-    scroll-behavior: auto;
-  }
+  html { scroll-behavior: auto; }
 }

@@ -10,7 +10,7 @@ export const Type = () => {
           "React.js Developer",
           "Next.js Developer",
           "Node.js Developer",
-          "TypeScript Developer",
+          "AI & LLM Engineer",
         ],
         autoStart: true,
         loop: true,

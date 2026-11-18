@@ -29,12 +29,11 @@ export const About = () => {
 
         <p className="about__desc" data-aos="fade-right">
           Full Stack Developer with 2.6 years of experience designing,
-          developing, and scaling web applications and microservices using
-          Node.js, Express.js, TypeScript, React.js, and Next.js. Experienced
-          in building multi-region, multilingual portals deployed across 16
-          countries, developing REST APIs for payments, transactions, user
-          lifecycle, and tariff management, and managing production workloads
-          with PostgreSQL, Sequelize, Redis, and AWS.
+          developing, and scaling multi-region web applications and
+          microservices across 16 countries using Node.js, Express.js,
+          TypeScript, React.js, and Next.js. Skilled in building secure,
+          real-time APIs for payments, subscriber lifecycle, eKYC workflows,
+          and tariff management backed by PostgreSQL, MongoDB, Redis, and AWS.
         </p>
 
         <div className="about__contact center">

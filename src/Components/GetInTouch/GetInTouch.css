@@ -1,12 +1,10 @@
-/* Contact — split: channels left, form right, hairline frame */
+/* Contact — glass split */
 .contactMain {
   width: 100%;
   margin: 0;
-
   display: grid;
   grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
-  gap: 3.5rem;
-
+  gap: 2.5rem;
   align-items: start;
 }
 
@@ -14,52 +12,53 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  border-left: 2px solid var(--clr-primary);
-  padding-left: 2rem;
+  background: var(--clr-glass);
+  backdrop-filter: blur(var(--blur)) saturate(180%);
+  -webkit-backdrop-filter: blur(var(--blur)) saturate(180%);
+  border: 1px solid var(--clr-glass-border);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  box-shadow: 0 8px 32px var(--clr-shadow), inset 0 1px 0 rgba(255,255,255,0.08);
 }
 
 .contactcontainer {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 0.9rem;
+  gap: 0.75rem;
+  flex-wrap: wrap;
 }
 
 .contactcontainer a {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  width: 48px;
-  height: 48px;
-  font-size: 1.5rem;
-
-  border: 1px solid var(--clr-line);
-  border-radius: 2px;
-
+  width: 46px;
+  height: 46px;
+  font-size: 1.4rem;
+  border: 1px solid var(--clr-glass-border);
+  border-radius: 50%;
+  background: var(--clr-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   transition: color 0.2s var(--ease-out), border-color 0.2s var(--ease-out),
-    transform 0.2s var(--ease-out);
+    transform 0.25s var(--ease-spring), background-color 0.2s var(--ease-out);
 }
 
 .contactcontainer a:hover {
   color: var(--clr-primary);
   border-color: var(--clr-primary);
-  transform: translateY(-3px);
+  transform: translateY(-3px) scale(1.05);
+  background: var(--clr-primary-soft);
 }
 
-.linkedin,
-.github,
-.email,
-.phone {
-  color: inherit;
-}
+.linkedin, .github, .email, .phone { color: inherit; }
 
 .mailNumber {
-  margin-top: 1.8rem;
-
+  margin-top: 1.6rem;
   display: flex;
   flex-direction: column;
-  gap: 0.9rem;
+  gap: 0.75rem;
 }
 
 .contactDetail {
@@ -69,65 +68,41 @@
   gap: 0.8rem;
   font-family: var(--font-mono);
   font-size: 0.88rem;
+  color: var(--clr-fg);
 }
 
-.contactDetail p {
-  margin: 0;
-  font-size: 0.88rem;
-}
-
-.contactDetail svg {
-  font-size: 1.1rem;
-  color: var(--clr-primary);
-}
+.contactDetail p { margin: 0; font-size: 0.88rem; }
+.contactDetail svg { font-size: 1.1rem; color: var(--clr-primary); }
 
 .email-box {
   width: 100%;
-  border: 1px solid var(--clr-line);
-  border-radius: 4px;
-  background: var(--clr-bg-alt);
+  background: var(--clr-glass);
+  backdrop-filter: blur(var(--blur)) saturate(180%);
+  -webkit-backdrop-filter: blur(var(--blur)) saturate(180%);
+  border: 1px solid var(--clr-glass-border);
+  border-radius: var(--radius-xl);
   padding: 2rem;
+  box-shadow: 0 8px 32px var(--clr-shadow), inset 0 1px 0 rgba(255,255,255,0.08);
 }
 
-/* Tablet */
 @media (max-width: 800px) {
   .contactMain {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-
-  .contactInfo {
-    order: 1;
-    padding-left: 1.4rem;
-  }
-
-  .email-box {
-    order: 2;
-    padding: 1.4rem;
-  }
-}
-
-/* Mobile */
-@media (max-width: 500px) {
-  .contactMain {
     gap: 2rem;
   }
 
-  .contactcontainer {
-    gap: 0.7rem;
-  }
+  .contactInfo { padding: 1.5rem; }
+  .email-box { padding: 1.4rem; }
+}
 
+@media (max-width: 500px) {
+  .contactMain { gap: 1.6rem; }
+  .contactcontainer { gap: 0.6rem; }
   .contactcontainer a {
-    width: 44px;
-    height: 44px;
-    font-size: 1.3rem;
+    width: 42px;
+    height: 42px;
+    font-size: 1.25rem;
   }
-
-  .contactDetail p {
-    font-size: 0.82rem;
-  }
-
-  .email-box {
-    padding: 1.2rem;
-  }
+  .contactDetail p { font-size: 0.82rem; }
+  .email-box { padding: 1.2rem; }
 }

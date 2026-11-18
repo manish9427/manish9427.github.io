@@ -7,23 +7,30 @@ import {
   SiNextdotjs,
   SiTypescript,
   SiJavascript,
+  SiJava,
+  SiPython,
   SiRedux,
   SiHtml5,
   SiCss3,
   SiNodedotjs,
   SiExpress,
+  SiSocketdotio,
+  SiPm2,
   SiPostgresql,
+  SiMongodb,
   SiRedis,
   SiGit,
   SiGithub,
   SiGitlab,
   SiMaterialui,
-  SiPm2,
   SiSequelize,
   SiAmazonaws,
+  SiGithubactions,
+  SiTwilio,
   SiJsonwebtokens,
   SiJest,
   SiJira,
+  SiOpenai,
 } from "react-icons/si";
 
 export const Techstacks = () => {
@@ -43,6 +50,14 @@ export const Techstacks = () => {
     {
       icon: <SiTypescript />,
       name: "TypeScript",
+    },
+    {
+      icon: <SiJava />,
+      name: "Java",
+    },
+    {
+      icon: <SiPython />,
+      name: "Python",
     },
     {
       icon: <FaReact />,
@@ -69,12 +84,24 @@ export const Techstacks = () => {
       name: "Express.js",
     },
     {
+      icon: <SiSocketdotio />,
+      name: "Socket.IO",
+    },
+    {
       icon: <SiPm2 />,
       name: "PM2",
     },
     {
+      icon: <SiTwilio />,
+      name: "Twilio",
+    },
+    {
       icon: <SiPostgresql />,
       name: "PostgreSQL",
+    },
+    {
+      icon: <SiMongodb />,
+      name: "MongoDB",
     },
     {
       icon: <SiSequelize />,
@@ -87,6 +114,10 @@ export const Techstacks = () => {
     {
       icon: <SiAmazonaws />,
       name: "AWS",
+    },
+    {
+      icon: <SiGithubactions />,
+      name: "GitHub Actions",
     },
     {
       icon: <SiJsonwebtokens />,
@@ -111,6 +142,10 @@ export const Techstacks = () => {
     {
       icon: <SiJira />,
       name: "Jira",
+    },
+    {
+      icon: <SiOpenai />,
+      name: "LLMs & RAG",
     },
   ];
 

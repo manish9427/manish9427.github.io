@@ -16,16 +16,18 @@
 
   padding: 13px 15px;
 
-  border: 1px solid var(--clr-line);
-  border-radius: 2px;
+  border: 1px solid var(--clr-glass-border);
+  border-radius: var(--radius-md);
 
-  background: var(--clr-bg);
+  background: var(--clr-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   color: var(--clr-fg);
 
   font-family: var(--font-body);
   font-size: 1rem;
 
-  transition: border-color 0.2s var(--ease-out);
+  transition: border-color 0.2s var(--ease-out), box-shadow 0.2s var(--ease-out), background-color 0.2s var(--ease-out);
 }
 
 .form input::placeholder,
@@ -36,6 +38,9 @@
 .form input:focus,
 .form textarea:focus {
   border-color: var(--clr-primary);
+  background: var(--clr-glass-strong);
+  box-shadow: 0 0 0 3px var(--clr-primary-soft);
+  outline: none;
 }
 
 .form textarea {
@@ -50,7 +55,7 @@
   padding: 13px 28px;
 
   border: 1px solid var(--clr-primary);
-  border-radius: 2px;
+  border-radius: var(--radius-md);
 
   background: var(--clr-primary);
   color: var(--clr-bg);

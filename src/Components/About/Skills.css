@@ -1,7 +1,7 @@
-/* Skills — spec-sheet rows with hairlines, mono index numbers */
+/* Skills — glass rows */
 .skills {
   width: 100%;
-  margin-top: clamp(4rem, 9vw, 7rem);
+  margin-top: clamp(3rem, 7vw, 5rem);
   scroll-margin-top: 4.75rem;
 }
 
@@ -10,48 +10,44 @@
   margin: 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 3.5rem;
-  row-gap: 0;
+  column-gap: 1.25rem;
+  row-gap: 0.75rem;
 }
 
 .skills__item {
   display: flex;
   align-items: center;
-
   margin: 0;
-  padding: 0.85rem 0.2rem;
-
+  padding: 0.85rem 1rem;
   font-family: var(--font-body);
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.5;
-
-  border-bottom: 1px solid var(--clr-line);
-  transition: color 0.2s var(--ease-out), padding-left 0.2s var(--ease-out);
+  background: var(--clr-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--clr-glass-border);
+  border-radius: var(--radius-md);
+  transition: transform 0.2s var(--ease-out), background-color 0.2s var(--ease-out), border-color 0.2s var(--ease-out);
 }
 
 .skills__item:hover {
   color: var(--clr-primary);
-  padding-left: 0.7rem;
+  background: var(--clr-primary-soft);
+  border-color: var(--clr-primary);
+  transform: translateY(-2px) translateX(4px);
 }
 
 .skills__item .icons {
   display: flex;
   align-items: center;
-  margin-right: 0.6rem;
+  margin-right: 0.7rem;
   color: var(--clr-primary);
 }
 
-.skills__item .icons svg {
-  font-size: 0.85rem;
-}
+.skills__item .icons svg { font-size: 0.9rem; }
 
 @media (max-width: 800px) {
-  .skills__container {
-    grid-template-columns: 1fr;
-  }
-
-  .skills__item {
-    font-size: 0.95rem;
-  }
+  .skills__container { grid-template-columns: 1fr; }
+  .skills__item { font-size: 0.95rem; }
 }

@@ -1,43 +1,35 @@
 .scroll-top {
   position: fixed;
-  right: 30px;
-  bottom: 30px;
-  width: 48px;
-  height: 48px;
+  right: 24px;
+  bottom: 24px;
+  width: 46px;
+  height: 46px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--clr-line);
-  border-bottom: 2px solid var(--clr-primary);
-  border-radius: 2px;
-  background: var(--clr-bg-alt);
+  background: var(--clr-glass-strong);
+  backdrop-filter: blur(var(--blur)) saturate(180%);
+  -webkit-backdrop-filter: blur(var(--blur)) saturate(180%);
+  border: 1px solid var(--clr-glass-border);
+  border-radius: 50%;
   color: var(--clr-primary);
   cursor: pointer;
   z-index: 1000;
-  transition: background-color 0.2s var(--ease-out), color 0.2s var(--ease-out),
-    transform 0.2s var(--ease-out);
+  box-shadow: 0 8px 24px var(--clr-shadow);
+  transition: transform 0.25s var(--ease-spring), background-color 0.2s var(--ease-out), box-shadow 0.2s var(--ease-out);
 }
 
 .scroll-top:hover {
   background: var(--clr-primary);
-  color: var(--clr-bg);
+  color: #fff;
   border-color: var(--clr-primary);
-  transform: translateY(-3px);
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 12px 28px var(--clr-glow);
 }
 
-.scroll-top svg {
-  font-size: 26px;
-}
+.scroll-top svg { font-size: 24px; }
 
 @media (max-width: 500px) {
-  .scroll-top {
-    right: 16px;
-    bottom: 16px;
-    width: 44px;
-    height: 44px;
-  }
-
-  .scroll-top svg {
-    font-size: 22px;
-  }
+  .scroll-top { right: 16px; bottom: 16px; width: 42px; height: 42px; }
+  .scroll-top svg { font-size: 20px; }
 }
